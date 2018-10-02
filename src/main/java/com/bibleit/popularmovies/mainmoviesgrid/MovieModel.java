@@ -1,4 +1,4 @@
-package MainMoviesGrid;
+package mainmoviesgrid;
 
 public class MovieModel {
 
