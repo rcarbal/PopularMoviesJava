@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -26,6 +27,7 @@ public class PopularMovies extends Application {
         Image icon = new Image("icons/black.png");
 
         stage.getIcons().add(icon);
+        stage.centerOnScreen();
 
         stage.show();
     }

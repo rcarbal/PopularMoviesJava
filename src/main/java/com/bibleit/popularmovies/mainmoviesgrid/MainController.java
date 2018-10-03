@@ -1,13 +1,23 @@
 package mainmoviesgrid;
 
+import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import moviedetailpopup.DetailController;
 import movieobjects.MovieDetails;
 import services.GetMovieJsonService;
 import services.GetMoviesArrayService;
@@ -15,6 +25,7 @@ import utilities.CheckConnection;
 import utilities.MovieUriBuilder;
 
 import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -85,6 +96,10 @@ public class MainController implements Initializable {
                 ImageView imageView = new ImageView(image);
                 imageView.setFitHeight(screenHeight / 3.5);
                 imageView.setFitWidth(screenWidth / 8);
+                imageView.setPickOnBounds(true);
+                imageView.setOnMouseClicked(event -> {
+                    openPop();
+                });
                 root.add(imageView, j, i);
                 index++;
                 if (index == 20) {
@@ -92,5 +107,39 @@ public class MainController implements Initializable {
                 }
             }
         }
+    }
+
+    private void openPop(){
+        DetailController controller = new DetailController();
+        FXMLLoader detailLoader = new FXMLLoader();
+        detailLoader.setLocation(getClass().getResource("/detailview.fxml"));
+
+        Parent rootParent = null;
+        try {
+            rootParent = detailLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage popupStage = new Stage();
+        Stage parentStage = (Stage) root.getScene().getWindow();
+        root.setEffect(new GaussianBlur());
+
+        popupStage.initOwner(parentStage);
+        popupStage.initModality(Modality.APPLICATION_MODAL);
+        popupStage.centerOnScreen();
+        popupStage.setScene(new Scene(rootParent));
+        popupStage.setOnCloseRequest(e -> {
+            root.setEffect(null);
+        });
+//        popupStage.focusedProperty().addListener((obs, wasFocused, isNowFocused) ->{
+//            if (! isNowFocused){
+//                parentStage.isFocused();
+//                popupStage.hide();
+//                root.setEffect(null);
+//            }
+//        });
+        popupStage.show();
+
     }
 }
