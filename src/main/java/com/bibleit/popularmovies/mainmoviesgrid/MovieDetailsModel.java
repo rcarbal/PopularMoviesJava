@@ -1,6 +1,8 @@
-package movieobjects;
+package mainmoviesgrid;
 
-public class MovieDetails {
+import javafx.scene.image.ImageView;
+
+public class MovieDetailsModel {
 
 
     private int id =-1;
@@ -14,7 +16,26 @@ public class MovieDetails {
     private long databaseColumn=-1;
     private String mListDescription="";
 
-    public MovieDetails() {
+//    private ImageView poster_reference = null;
+//    private int index = -1;
+
+//    public int getIndex() {
+//        return index;
+//    }
+//
+//    public void setIndex(int index) {
+//        this.index = index;
+//    }
+//
+//    public ImageView getPosterImage() {
+//        return posterImage;
+//    }
+//
+//    public void setPosterImage(ImageView posterImage) {
+//        this.posterImage = posterImage;
+//    }
+
+    public MovieDetailsModel() {
     }
 
     public int getId() {

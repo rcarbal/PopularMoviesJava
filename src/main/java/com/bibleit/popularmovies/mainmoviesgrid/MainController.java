@@ -1,6 +1,5 @@
 package mainmoviesgrid;
 
-import javafx.application.Platform;
 import javafx.concurrent.Service;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,20 +7,15 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import moviedetailpopup.DetailController;
-import movieobjects.MovieDetails;
 import services.GetMovieJsonService;
 import services.GetMoviesArrayService;
-import utilities.CheckConnection;
 import utilities.MovieUriBuilder;
 
 import java.awt.*;
@@ -30,6 +24,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
+
+    private MovieDetailsModel[] data;
 
     private double screenHeight;
     private double screenWidth;
@@ -41,7 +37,6 @@ public class MainController implements Initializable {
     @FXML
     private GridPane root;
 
-    private MovieDetails[] data;
 
     public MainController() {
     }
@@ -56,12 +51,12 @@ public class MainController implements Initializable {
         screenWidthPadding = screenWidth / 25;
 
 
-        if (CheckConnection.checkCOnnection()) {
+//        if (CheckConnection.checkCOnnection()) {
             getMovieJson();
-        } else {
+//        } else {
             //TODO no connection
-        }
-
+//        }
+//
     }
 
     private void getMovieJson() {
@@ -77,7 +72,7 @@ public class MainController implements Initializable {
     }
 
     private void convertResponseToData(String response) {
-        Service<MovieDetails[]> service = new GetMoviesArrayService(response);
+        Service<MovieDetailsModel[]> service = new GetMoviesArrayService(response);
         service.setOnSucceeded(e -> {
             data = service.getValue();
             addToRoot();
@@ -97,8 +92,12 @@ public class MainController implements Initializable {
                 imageView.setFitHeight(screenHeight / 3.5);
                 imageView.setFitWidth(screenWidth / 8);
                 imageView.setPickOnBounds(true);
-                imageView.setOnMouseClicked(event -> {
-                    openPop();
+                imageView.setCache(true);
+                imageView.setOnMouseClicked(e -> {
+                   int row = GridPane.getRowIndex(imageView);
+                    int column = GridPane.getColumnIndex(imageView);
+                    Image poster = imageView.getImage();
+                    openPop(poster);
                 });
                 root.add(imageView, j, i);
                 index++;
@@ -109,8 +108,10 @@ public class MainController implements Initializable {
         }
     }
 
-    private void openPop(){
-        DetailController controller = new DetailController();
+    private void openPop(Image poster){
+
+        ImageView moviePoster = new ImageView(poster);
+
         FXMLLoader detailLoader = new FXMLLoader();
         detailLoader.setLocation(getClass().getResource("/detailview.fxml"));
 
@@ -120,6 +121,9 @@ public class MainController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        DetailController controller = detailLoader.<DetailController>getController();
+        controller.setPosterImage(moviePoster);
+
 
         Stage popupStage = new Stage();
         Stage parentStage = (Stage) root.getScene().getWindow();

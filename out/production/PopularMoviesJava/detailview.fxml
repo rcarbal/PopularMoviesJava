@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="moviedetailpopup.DetailController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.text.Text?>
+<VBox prefHeight="400.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="moviedetailpopup.DetailController">
+    <children>
+        <!--Poster and Title-->
+        <StackPane>
+            <ImageView fx:id="movie_poster" fitHeight="700.0" fitWidth="580.0"/>
 
-</AnchorPane>
+            <StackPane fx:id="movie_black_bar" alignment="BOTTOM_CENTER" maxHeight="200"
+                       style="-fx-background-color: black">
+                <effect>
+                    <Shadow color="#000000c9" height="180.62" radius="49.905"/>
+                </effect>
+            </StackPane>
+            <StackPane
+                    fx:id="movie_info" alignment="BOTTOM_CENTER" maxHeight="180" style="-fx-background-color: transparent">
+                <VBox>
+                    <children>
+                        <Text fx:id="movie_title" lineSpacing="1.0" text="MOVIE TITLE">
+                        </Text>
+                        <Text fx:id="movie_description" text="This is the description of the movie">
+                        </Text>
+                    </children>
+                </VBox>
+
+            </StackPane>
+        </StackPane>
+
+    </children>
+</VBox>

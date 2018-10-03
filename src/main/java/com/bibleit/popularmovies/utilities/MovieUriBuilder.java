@@ -12,6 +12,7 @@ public class MovieUriBuilder {
     private static final String API_KEY = "80c08a7febb5450bffb919f2c3416264";
     private static final String BASE_VIDEO = "v";
 
+    //URL for the Popular
     public static URL buildPopularUri(){
 
         String uriString = BASE_POPULAR_URL+API_KEY;
@@ -21,6 +22,12 @@ public class MovieUriBuilder {
             e.printStackTrace();
         }
         return null;
+    }
+
+    //URL for Movie Details
+    public static URL buildMovieDetailsUri(String movieId){
+        return null;
+
     }
 
 }
