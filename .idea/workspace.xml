@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44bb4c92-9783-4884-8c5b-9f8e9089747b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/gson-2.8.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMoviesArrayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MoviesJsonParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PopularMoviesJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PopularMoviesJava.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MovieModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MovieModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/MovieObjects/MovieDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/MovieObjects/MovieDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/PopularMovies.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/PopularMovies.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviesgrid.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviesgrid.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/utilities/GetMovieJsonService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/utilities/GetMovieJsonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/utilities/JsonParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/MainMoviesGrid/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/MainMoviesGrid/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/MovieObjects/MovieDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/movieobjects/MovieDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/CheckConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/CheckConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/GetMovieJsonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMovieJsonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/JsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/MovieUriBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MovieUriBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,28 +44,31 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="fxml" value="1" />
-          <entry key="java" value="16" />
+          <entry key="gif" value="1" />
+          <entry key="java" value="18" />
+          <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="16" />
+          <entry key="Image" value="2" />
+          <entry key="JAVA" value="18" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="fxml" value="13" />
-          <entry key="java" value="1792" />
+          <entry key="fxml" value="50" />
+          <entry key="java" value="2791" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1792" />
+          <entry key="JAVA" value="2791" />
           <entry key="PLAIN_TEXT" value="13" />
-          <entry key="XML" value="13" />
+          <entry key="XML" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -98,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
@@ -112,104 +96,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="172">
+              <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMoviesArrayService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#351#352#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMovieJsonService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="20" column="41" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-                <element signature="e#452#1411#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MoviesJsonParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/movieobjects/MovieDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-              <folding>
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
-                <element signature="e#707#708#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#843#844#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="e#1147#1148#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1267#1268#0" expanded="true" />
-                <element signature="e#1323#1324#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1406#1407#0" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
-                <element signature="e#1561#1562#0" expanded="true" />
-                <element signature="e#1593#1594#0" expanded="true" />
-                <element signature="e#1644#1645#0" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1725#1726#0" expanded="true" />
-                <element signature="e#1762#1763#0" expanded="true" />
-                <element signature="e#1820#1821#0" expanded="true" />
-                <element signature="e#1872#1873#0" expanded="true" />
-                <element signature="e#1915#1916#0" expanded="true" />
-                <element signature="e#1954#1955#0" expanded="true" />
-                <element signature="e#2018#2019#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,32 +109,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/CheckConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MovieUriBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -272,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/MainMoviesGrid/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/MainMoviesGrid/MovieModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/utilities/CheckConnection.java" />
@@ -287,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMoviesArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MoviesJsonParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/GetMoviesArrayService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" />
       </list>
@@ -299,10 +165,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+    <option name="x" value="-10" />
+    <option name="width" value="1522" />
+    <option name="height" value="1932" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -388,6 +253,51 @@
               <item name="popularmovies" type="462c0819:PsiDirectoryNode" />
               <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Popular Movies Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PopularMoviesJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Popular Movies Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PopularMoviesJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Popular Movies Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PopularMoviesJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibleit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Popular Movies Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PopularMoviesJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibleit" type="462c0819:PsiDirectoryNode" />
+              <item name="popularmovies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Popular Movies Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PopularMoviesJava" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bibleit" type="462c0819:PsiDirectoryNode" />
+              <item name="popularmovies" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -398,7 +308,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538522418117" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538530060590" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -451,18 +361,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538508247310</updated>
       <workItem from="1538508249142" duration="5968000" />
-      <workItem from="1538514839954" duration="7348000" />
+      <workItem from="1538514839954" duration="14921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13316000" />
+    <option name="totallyTimeSpent" value="20889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25292096" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25292096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -471,8 +381,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897863" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39904988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936978" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -503,12 +413,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MoviesJsonParser.java</url>
           <line>21</line>
           <properties />
@@ -516,12 +420,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java</url>
-          <line>47</line>
+          <line>90</line>
           <properties />
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="screenHeight" />
+        <watch expression="screenWigth" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PopularMoviesJava.iml">
@@ -642,14 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/MoviesJsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -687,10 +595,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="612" column="9" selection-start-line="612" selection-start-column="9" selection-end-line="612" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/bibleit/popularmovies/moviesgrid.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-10.0.1!/jdk.deploy/com/sun/deploy/resources/image/icon-info16.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-10.0.1!/java.desktop/javax/swing/plaf/metal/icons/ocean/iconify.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/PopularMovies.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#841#842#0" expanded="true" />
@@ -701,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="172">
+          <caret line="27" column="92" selection-start-line="27" selection-start-column="92" selection-end-line="27" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
