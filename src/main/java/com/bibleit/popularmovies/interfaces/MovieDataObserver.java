@@ -2,7 +2,7 @@ package interfaces;
 
 import objects.MovieDetails;
 
-public interface Observer {
+public interface MovieDataObserver {
 
     public abstract void update(MovieDetails[] details);
 }

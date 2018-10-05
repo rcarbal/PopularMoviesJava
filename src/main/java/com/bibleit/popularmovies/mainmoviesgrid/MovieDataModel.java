@@ -1,6 +1,6 @@
 package mainmoviesgrid;
 
-import interfaces.Observer;
+import interfaces.MovieDataObserver;
 import javafx.concurrent.Service;
 import objects.MovieDetails;
 import services.GetMovieJsonService;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class MovieDataModel {
 
-    private ArrayList<Observer> observers = new ArrayList<>();
+    private ArrayList<MovieDataObserver> movieDataObservers = new ArrayList<>();
 
     private MovieDetails[] data;
 
@@ -42,8 +42,8 @@ public class MovieDataModel {
         service.restart();
     }
 
-    public void attach(Observer observer){
-        observers.add(observer);
+    public void attach(MovieDataObserver movieDataObserver){
+        movieDataObservers.add(movieDataObserver);
     }
 
     public MovieDetails[] getData() {
@@ -51,8 +51,8 @@ public class MovieDataModel {
     }
 
     public void notifyAllObservers(){
-        for(Observer observer: observers){
-            observer.update(data);
+        for(MovieDataObserver movieDataObserver : movieDataObservers){
+            movieDataObserver.update(data);
         }
     }
 

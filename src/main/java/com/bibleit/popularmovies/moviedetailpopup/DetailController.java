@@ -17,6 +17,8 @@ import objects.MovieDetails;
 import utilities.CheckConnection;
 
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class DetailController implements Initializable {
@@ -49,20 +51,13 @@ public class DetailController implements Initializable {
     public Pane mainPane;
 
     private ImageView posterImage;
-
-    public MovieDetails getMovie() {
-        return movie;
-    }
+    private DetailModel model;
 
     public void setMovie(MovieDetails movie) {
         this.movie = movie;
     }
 
     private MovieDetails movie;
-
-    public ImageView getPosterImage() {
-        return posterImage;
-    }
 
     public void setPosterImage(ImageView posterImage) {
         this.posterImage = posterImage;
@@ -78,14 +73,33 @@ public class DetailController implements Initializable {
 
         Platform.runLater(this::setupLayout);
 
-    };
 
-    private void setupLayout(){
+    }
+
+    private void setLayoutInvisible() {
+
+        close_button.setVisible(false);
+        favorite_button.setVisible(false);
+        movie_poster.setVisible(false);
+        movie_black_bar.setVisible(false);
+        movie_info_pane.setVisible(false);
+        top_bar.setVisible(false);
+        movie_title.setVisible(false);
+        movie_description.setVisible(false);
+        close_button.setVisible(false);
+        favorite_button.setVisible(false);
+
+        setupLayout();
+    }
+
+
+    private void setupLayout() {
+
         close_button.setStyle("-fx-background-color: transparent");
         favorite_button.setStyle("-fx-background-color: transparent");
 
         movie_poster.setImage(posterImage.getImage());
-
+        mainPane.setVisible(false);
         StackPane.setAlignment(movie_black_bar, Pos.BOTTOM_CENTER);
         StackPane.setAlignment(movie_info_pane, Pos.BOTTOM_CENTER);
         StackPane.setAlignment(top_background, Pos.TOP_CENTER);
@@ -107,23 +121,66 @@ public class DetailController implements Initializable {
         closeImageView.setFitHeight(30);
         closeImageView.setFitWidth(30);
         close_button.setGraphic(closeImageView);
-        close_button.setOnMouseClicked(e ->{
+        close_button.setOnMouseClicked(e -> {
             Stage stage = (Stage) close_button.getScene().getWindow();
             stage.close();
         });
         Image notFavorite = new Image("icons/notfavorite.png");
         ImageView notFavoriteImageView = new ImageView(notFavorite);
         favorite_button.setGraphic(notFavoriteImageView);
-
-        mainPane.setVisible(false);
+        favorite_button.setOnMouseClicked(e -> {
+            int index = setAsFavorite(movie.getId());
+            if (index > 0) {
+                Image favorite = new Image("icons/favorite.png");
+                ImageView favoriteImageView = new ImageView(favorite);
+                favorite_button.setGraphic(favoriteImageView);
+            }
+        });
         getHighResImage();
 
+        //Connect to database
+        connectToDatabase();
+        if (!movie.ismFavorite()){
+            ResultSet res = model.isFavorite(movie.getId());
+            try {
+                if (res.getInt("ID") > 0){
+                    Image image = new Image("icons/favorite.png");
+                    favorite_button.setGraphic(new ImageView(image));
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
-    private void getHighResImage(){
-        if (CheckConnection.checkConnection()){
+    private void getHighResImage() {
+        if (CheckConnection.checkConnection()) {
             Image highImage = new Image(BASE_URL_FOR_IMAGE_PARSING + movie.getPoster_path(), true);
             movie_poster.setImage(highImage);
         }
     }
+
+    private void connectToDatabase() {
+        model = new DetailModel();
+        try {
+            model.connectDatabase();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private int setAsFavorite(int movieId) {
+        if (model == null) {
+            connectToDatabase();
+        }
+        try {
+            movie.setmFavorite(true);
+            return model.addMovie(movieId);
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
 }

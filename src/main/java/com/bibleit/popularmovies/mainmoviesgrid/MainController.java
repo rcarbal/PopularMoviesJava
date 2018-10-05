@@ -1,7 +1,7 @@
 package mainmoviesgrid;
 
 
-import interfaces.Observer;
+import interfaces.MovieDataObserver;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController  implements Initializable, Observer {
+public class MainController  implements Initializable, MovieDataObserver {
 
     private MovieDataModel model = new MovieDataModel();
     private int currentIndex;
@@ -116,9 +116,6 @@ public class MainController  implements Initializable, Observer {
             popupStage.centerOnScreen();
             popupStage.initStyle(StageStyle.UNDECORATED);
             popupStage.setScene(new Scene(rootParent));
-//        popupStage.setOnCloseRequest(e -> {
-//            root.setEffect(null);
-//        });
             parentStage.focusedProperty().addListener((obs, wasFocused, isNowFocused) ->{
                 if (isNowFocused){
                     root.setEffect(null);
@@ -146,6 +143,7 @@ public class MainController  implements Initializable, Observer {
     public void update(MovieDetails[] details) {
         addToRoot(details);
         dataReady = true;
-
     }
+
+
 }

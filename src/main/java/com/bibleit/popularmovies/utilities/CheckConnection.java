@@ -18,7 +18,6 @@ public class CheckConnection {
             return false;
         }
         return true;
-
     }
 
 }
