@@ -16,25 +16,6 @@ public class MovieDetails {
     private long databaseColumn=-1;
     private String mListDescription="";
 
-//    private ImageView poster_reference = null;
-//    private int index = -1;
-
-//    public int getIndex() {
-//        return index;
-//    }
-//
-//    public void setIndex(int index) {
-//        this.index = index;
-//    }
-//
-//    public ImageView getPosterImage() {
-//        return posterImage;
-//    }
-//
-//    public void setPosterImage(ImageView posterImage) {
-//        this.posterImage = posterImage;
-//    }
-
     public MovieDetails() {
     }
 
@@ -94,7 +75,7 @@ public class MovieDetails {
         this.overview = overview;
     }
 
-    public boolean ismFavorite() {
+    public boolean getFavorite() {
         return mFavorite;
     }
 

@@ -1,5 +1,6 @@
 package moviedetailpopup;
 
+import interfaces.DatabaseConnectObserver;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class DetailController implements Initializable {
+public class DetailController implements Initializable, DatabaseConnectObserver {
 
     private static final String BASE_URL_FOR_IMAGE_PARSING = "http://image.tmdb.org/t/p/w500/";
 
@@ -125,32 +126,17 @@ public class DetailController implements Initializable {
             Stage stage = (Stage) close_button.getScene().getWindow();
             stage.close();
         });
+
+        //By default set image to not favorite.
         Image notFavorite = new Image("icons/notfavorite.png");
         ImageView notFavoriteImageView = new ImageView(notFavorite);
         favorite_button.setGraphic(notFavoriteImageView);
-        favorite_button.setOnMouseClicked(e -> {
-            int index = setAsFavorite(movie.getId());
-            if (index > 0) {
-                Image favorite = new Image("icons/favorite.png");
-                ImageView favoriteImageView = new ImageView(favorite);
-                favorite_button.setGraphic(favoriteImageView);
-            }
-        });
+        favorite_button.setOnMouseClicked(null);
+
         getHighResImage();
 
         //Connect to database
         connectToDatabase();
-        if (!movie.ismFavorite()){
-            ResultSet res = model.isFavorite(movie.getId());
-            try {
-                if (res.getInt("ID") > 0){
-                    Image image = new Image("icons/favorite.png");
-                    favorite_button.setGraphic(new ImageView(image));
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private void getHighResImage() {
@@ -162,6 +148,7 @@ public class DetailController implements Initializable {
 
     private void connectToDatabase() {
         model = new DetailModel();
+        model.attach(this);
         try {
             model.connectDatabase();
         } catch (SQLException | ClassNotFoundException e) {
@@ -183,4 +170,52 @@ public class DetailController implements Initializable {
         return -1;
     }
 
-}
+    private void removeFromFavorites(int id) {
+        if (model == null){
+            connectToDatabase();
+        }
+
+        int rowsRemoved = model.removeMovie(movie.getId());
+    }
+
+    @Override
+    public void update(boolean connected) {
+
+        //Check the database and change icon if movie is favorite.
+        int index = model.isFavorite(movie.getId());
+        if (index > 0) {
+            Image image = new Image("icons/favorite.png");
+            favorite_button.setGraphic(new ImageView(image));
+            if (!movie.getFavorite()){
+                movie.setmFavorite(true);
+            }
+
+        }
+        enableFavoriteButtonFunction();
+    }
+
+
+        private void enableFavoriteButtonFunction () {
+
+            //When clicked
+            favorite_button.setOnMouseClicked(e -> {
+
+                if (!movie.getFavorite()) {
+                    int index = setAsFavorite(movie.getId());
+                    if (index > 0) {
+                        Image favorite = new Image("icons/favorite.png");
+                        ImageView favoriteImageView = new ImageView(favorite);
+                        favorite_button.setGraphic(favoriteImageView);
+                    }
+                }else if (movie.getFavorite()){
+                    removeFromFavorites(movie.getId());
+                    movie.setmFavorite(false);
+                    Image favorite = new Image("icons/notfavorite.png");
+                    ImageView favoriteImageView = new ImageView(favorite);
+                    favorite_button.setGraphic(favoriteImageView);
+                }
+            });
+
+        }
+    }
+

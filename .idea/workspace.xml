@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44bb4c92-9783-4884-8c5b-9f8e9089747b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/CheckMovieFavorite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/SQLiteUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/DatabaseConnectObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/MainMoviesGrid/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/interfaces/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/mainmoviesgrid/MovieDataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/mainmoviesgrid/MovieDataModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviedetailpopup/DetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviedetailpopup/DetailController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviedetailpopup/DetailModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PopularMoviesJava/moviedetailpopup/DetailModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/MovieDataObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieDataModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieDataModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/favorite_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/favorite_database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/CheckConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/CheckConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/objects/MovieDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/objects/MovieDetails.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,19 +51,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="3" />
+          <entry key="class" value="4" />
           <entry key="fxml" value="3" />
           <entry key="gif" value="1" />
-          <entry key="java" value="50" />
+          <entry key="java" value="56" />
           <entry key="png" value="5" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="3" />
+          <entry key="CLASS" value="4" />
           <entry key="Image" value="6" />
-          <entry key="JAVA" value="50" />
+          <entry key="JAVA" value="56" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -79,12 +71,12 @@
         <counts>
           <entry key="dummy" value="37" />
           <entry key="fxml" value="1647" />
-          <entry key="java" value="10481" />
+          <entry key="java" value="11640" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10480" />
+          <entry key="JAVA" value="11639" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="SQL" value="1" />
           <entry key="XML" value="1647" />
@@ -101,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
+            <state relative-caret-position="540">
+              <caret line="202" column="43" lean-forward="true" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,14 +103,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="54" column="20" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieDataModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1158#1159#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/DatabaseConnectObserver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/MovieDataObserver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/objects/MovieDetails.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#900#901#0" expanded="true" />
                 <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#2012#2013#0" expanded="true" />
                 <element signature="e#2044#2045#0" expanded="true" />
                 <element signature="e#2095#2096#0" expanded="true" />
                 <element signature="e#2137#2138#0" expanded="true" />
@@ -130,8 +167,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="645">
+              <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2214#2215#0" expanded="true" />
+                <element signature="e#2262#2263#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,22 +183,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
               <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/services/CheckMovieFavorite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#332#484#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -180,6 +206,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -187,10 +214,14 @@
     <findStrings>
       <find>black</find>
       <find>top_bar</find>
-      <find>favorite</find>
       <find>null</find>
       <find>favori</find>
       <find>fav</find>
+      <find>attach</find>
+      <find>model</find>
+      <find>favorite</find>
+      <find>isFavo</find>
+      <find>remo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,6 +264,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/ConnectToDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/SQLiteUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/objects/MovieDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/DatabaseConnectObserver.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailController.java" />
       </list>
@@ -407,7 +440,7 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;derby" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538723793817" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538768824456" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -471,18 +504,18 @@
       <workItem from="1538599020905" duration="16097000" />
       <workItem from="1538667424176" duration="8657000" />
       <workItem from="1538676508904" duration="10228000" />
-      <workItem from="1538693569492" duration="19274000" />
+      <workItem from="1538693569492" duration="25235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91234000" />
+    <option name="totallyTimeSpent" value="97195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28178695" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28178695" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24948454" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -492,7 +525,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32818073" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936978" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3983353" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983353" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -690,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/MovieDataObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/utilities/CheckConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -725,20 +751,6 @@
           <folding>
             <element signature="e#451#1410#0" expanded="true" />
             <element signature="e#1409#1410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1125#1126#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1191#1192#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -774,16 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc3/JDBC3PreparedStatement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -791,21 +793,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MovieDataModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="612">
+          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/MovieDataObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/interfaces/DatabaseConnectObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/mainmoviesgrid/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.23.1.jar!/org/sqlite/jdbc3/JDBC3ResultSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.sql/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="588" column="8" selection-start-line="588" selection-start-column="8" selection-end-line="588" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/objects/MovieDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#900#901#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#2012#2013#0" expanded="true" />
             <element signature="e#2044#2045#0" expanded="true" />
             <element signature="e#2095#2096#0" expanded="true" />
             <element signature="e#2137#2138#0" expanded="true" />
@@ -813,10 +859,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="102" column="18" selection-start-line="102" selection-start-column="18" selection-end-line="102" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2214#2215#0" expanded="true" />
+            <element signature="e#2262#2263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bibleit/popularmovies/moviedetailpopup/DetailController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="152" column="9" selection-start-line="152" selection-start-column="9" selection-end-line="152" selection-end-column="9" />
+        <state relative-caret-position="540">
+          <caret line="202" column="43" lean-forward="true" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

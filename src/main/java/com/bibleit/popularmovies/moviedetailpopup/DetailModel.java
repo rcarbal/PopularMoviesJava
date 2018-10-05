@@ -1,15 +1,21 @@
 package moviedetailpopup;
 
+import interfaces.DatabaseConnectObserver;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DetailModel {
 
     private static Connection connection;
+    private ArrayList<DatabaseConnectObserver> observers = new ArrayList<>();
 
     public void connectDatabase() throws SQLException, ClassNotFoundException {
         if (connection == null) {
             getConnection();
         }
+
+        notifyAllObservers(true);
 
     }
 
@@ -48,8 +54,8 @@ public class DetailModel {
         return prep.executeUpdate();
     }
 
-    ResultSet isFavorite(int id) {
-        ResultSet res = null;
+    int isFavorite(int id) {
+        int index = -1;
         if (connection == null) {
             try {
                 getConnection();
@@ -61,11 +67,51 @@ public class DetailModel {
         try {
             String query = "SELECT ID FROM FAVORITES WHERE movieId = "+id;
             Statement state = connection.createStatement();
-            res = state.executeQuery(query);
+            ResultSet res = null;
+            res =state.executeQuery(query);
+            if (res.next())index = res.getInt("ID");
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return res;
+        return index;
+    }
+
+
+    public int removeMovie(int id) {
+        int index = -1;
+        if (connection == null){
+            try {
+                getConnection();
+            } catch (ClassNotFoundException | SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        String query = "DELETE FROM FAVORITES WHERE movieId = " + id;
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
+
+
+    public void attach(DatabaseConnectObserver movieDataObserver){
+        observers.add(movieDataObserver);
+    }
+
+    public void notifyAllObservers(boolean conneted){
+        for(DatabaseConnectObserver databaseObserver : observers){
+            databaseObserver.update(conneted);
+        }
     }
 }
 
