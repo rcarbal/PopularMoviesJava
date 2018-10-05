@@ -1,6 +1,8 @@
 package moviedetailpopup;
 
 import interfaces.DatabaseConnectObserver;
+import javafx.concurrent.Service;
+import services.GetDatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,18 +15,30 @@ public class DetailModel {
     public void connectDatabase() throws SQLException, ClassNotFoundException {
         if (connection == null) {
             getConnection();
+        }else {
+
+            notifyAllObservers(true);
         }
 
-        notifyAllObservers(true);
 
     }
 
     private void getConnection() throws ClassNotFoundException, SQLException {
 
         Class.forName("org.sqlite.JDBC");
-        connection = DriverManager.getConnection("jdbc:sqlite:favorite_database.db");
 
-        initialize();
+        Service<Connection> service = new GetDatabaseConnection();
+        service.setOnSucceeded(e ->{
+            connection = service.getValue();
+            try {
+                initialize();
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+
+            notifyAllObservers(true);
+        });
+        service.restart();
     }
 
     private void initialize() throws SQLException {
@@ -37,7 +51,7 @@ public class DetailModel {
 
             Statement statement1 = connection.createStatement();
             statement1.execute("CREATE TABLE FAVORITES " +
-                    "(ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                    "(ID INTEGER PRIMARY KEY NOT NULL, " +
                     "movieId           INTEGER (60)   NOT NULL)");
 
 
