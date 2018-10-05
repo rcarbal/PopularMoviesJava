@@ -5,18 +5,18 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import mainmoviesgrid.MovieDetailsModel;
+import objects.MovieDetails;
 
 public class MoviesJsonParser {
 
-    public static MovieDetailsModel[] parseJsonObject(String jsonDataString, String listType){
+    public static MovieDetails[] parseJsonObject(String jsonDataString, String listType){
 
         JsonParser parser = new JsonParser();
         JsonObject object = parser.parse(jsonDataString).getAsJsonObject();
 
         JsonArray allMoviesArray = object.getAsJsonArray("results");
         Gson gson = new Gson();
-        MovieDetailsModel[] data = gson.fromJson(allMoviesArray, MovieDetailsModel[].class);
+        MovieDetails[] data = gson.fromJson(allMoviesArray, MovieDetails[].class);
         return data;
 
     }

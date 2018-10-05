@@ -2,10 +2,10 @@ package services;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
-import mainmoviesgrid.MovieDetailsModel;
+import objects.MovieDetails;
 import utilities.MoviesJsonParser;
 
-public class GetMoviesArrayService extends Service<MovieDetailsModel[]> {
+public class GetMoviesArrayService extends Service<MovieDetails[]> {
     private String jsonString;
 
     public GetMoviesArrayService(String jsonString) {
@@ -13,10 +13,10 @@ public class GetMoviesArrayService extends Service<MovieDetailsModel[]> {
     }
 
     @Override
-    protected Task<MovieDetailsModel[]> createTask() {
+    protected Task<MovieDetails[]> createTask() {
        return new Task<>() {
             @Override
-            protected MovieDetailsModel[] call() throws Exception {
+            protected MovieDetails[] call() throws Exception {
                 return MoviesJsonParser.parseJsonObject(jsonString, null);
             }
         };

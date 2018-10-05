@@ -4,34 +4,49 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.text.Text?>
-<VBox prefHeight="400.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="moviedetailpopup.DetailController">
-    <children>
-        <!--Poster and Title-->
-        <StackPane>
-            <ImageView fx:id="movie_poster" fitHeight="700.0" fitWidth="580.0"/>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<VBox fx:id="root" prefHeight="400.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.121"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviedetailpopup.DetailController"
+>
+    <!--Poster and Title-->
+    <StackPane>
+        <ImageView fx:id="movie_poster" fitHeight="700.0" fitWidth="550.0"/>
 
-            <StackPane fx:id="movie_black_bar" alignment="BOTTOM_CENTER" maxHeight="200"
-                       style="-fx-background-color: black">
-                <effect>
-                    <Shadow color="#000000c9" height="180.62" radius="49.905"/>
-                </effect>
-            </StackPane>
-            <StackPane
-                    fx:id="movie_info" alignment="BOTTOM_CENTER" maxHeight="180" style="-fx-background-color: transparent">
-                <VBox>
-                    <children>
-                        <Text fx:id="movie_title" lineSpacing="1.0" text="MOVIE TITLE">
-                        </Text>
-                        <Text fx:id="movie_description" text="This is the description of the movie">
-                        </Text>
-                    </children>
-                </VBox>
+        <StackPane fx:id="movie_black_bar" alignment="BOTTOM_CENTER" maxHeight="300"
+                   style="-fx-background-color: black">
+            <effect>
+                <Shadow color="#000000c9" height="180.62" radius="49.905"/>
+            </effect>
+        </StackPane>
+        <StackPane fx:id="movie_info_pane" alignment="BOTTOM_CENTER" maxHeight="280"
+                   style="-fx-background-color: transparent">
+            <VBox fx:id="movie_details_vbox" alignment="CENTER">
 
-            </StackPane>
+                <Button fx:id="favorite_button"/>
+                <Text fx:id="movie_title" lineSpacing="2.0">
+                </Text>
+
+                <Text fx:id="movie_description" wrappingWidth="520">
+                </Text>
+            </VBox>
+        </StackPane>
+        <StackPane fx:id="top_background" alignment="TOP_CENTER" maxHeight="50" style="-fx-background-color: black">
+            <effect>
+                <Shadow height="255.0" radius="63.25" width="0.0"/>
+            </effect>
         </StackPane>
 
-    </children>
+        <HBox fx:id="top_bar" maxHeight="50">
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+            <ImageView/>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="close_button"/>
+        </HBox>
+        <Pane fx:id="mainPane" style="-fx-background-color: black"/>
+    </StackPane>
+
 </VBox>

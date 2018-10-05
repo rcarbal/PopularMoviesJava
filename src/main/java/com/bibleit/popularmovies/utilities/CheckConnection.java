@@ -1,17 +1,19 @@
 package utilities;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
-import java.net.Socket;
+import java.net.URL;
+import java.net.URLConnection;
 
 public class CheckConnection {
 
 
-    public static boolean checkCOnnection() {
-        Socket socket = new Socket();
-        InetSocketAddress address = new InetSocketAddress("wwww.google.com", 80);
+    public static boolean checkConnection() {
+
         try {
-            socket.connect(address, 2500);
+            URL url = new URL("https://www.google.com");
+            URLConnection connection = url.openConnection();
+            connection.connect();
+
         } catch (IOException e) {
             return false;
         }
