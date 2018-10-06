@@ -20,3 +20,4 @@ Please use the Java JDK 1.8 to be able to run this application.
  - JSON parsing using GSON library
  
  
+![2018-10-05 5](https://user-images.githubusercontent.com/20021751/46565060-8f677c00-c8c0-11e8-8a0a-8a2365c4e2f6.png)
